@@ -12,9 +12,9 @@ function varTest() {
 	var x = 1;
 	{
 		var x = 2; // same variable!
-        console.log(x); // 2
-    }
-    console.log(x); // 2
+        	console.log(x); // 2
+        }
+    	console.log(x); // 2
 }
 ```
 
@@ -25,8 +25,8 @@ function letTest() {
 	let x = 1;
 	{
 		let x = 2; // different variable
-        console.log(x); // 2
-    }
+        	console.log(x); // 2
+        }
     console.log(x) // 1;
 }
 ```
@@ -54,9 +54,9 @@ var b = 2;
 
 if (a == 1) {
 	var a = 11; // the scope is global, it mutates `a`
-    let b = 22; // the scope is inside the if-block
-    console.log(a); // 11
-    console.log(b); // 22
+    	let b = 22; // the scope is inside the if-block
+   	console.log(a); // 11
+   	console.log(b); // 22
 }
 
 console.log(a); // 11
