@@ -42,7 +42,7 @@ function letTest() {
 		let x = 2;
         	console.log(x);
         }
-    console.log(x);
+        console.log(x);
 }
 ```
 
@@ -55,7 +55,7 @@ function letTest() {
 		let x = 2; // different variable
         	console.log(x); // 2
         }
-    console.log(x) // 1;
+        console.log(x) // 1;
 }
 ```
 
