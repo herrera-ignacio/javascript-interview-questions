@@ -8,7 +8,20 @@
 
 ```javascript
 function varTest() {
-	console.log(x) // undefined (hoisting)
+	console.log(x);
+	var x = 1;
+	{
+		var x = 2;
+        	console.log(x);
+        }
+    	console.log(x);
+}
+```
+
+
+```javascript
+function varTest() {
+	console.log(x);
 	var x = 1;
 	{
 		var x = 2; // same variable!
@@ -18,7 +31,22 @@ function varTest() {
 }
 ```
 
+Answer:
+
 ## Question 2: `let`
+
+```javascript
+function letTest() {
+	let x = 1;
+	{
+		let x = 2;
+        	console.log(x);
+        }
+    console.log(x);
+}
+```
+
+Answer:
 
 ```javascript
 function letTest() {
@@ -35,6 +63,16 @@ function letTest() {
 
 ```javascript
 {
+    const func = () => console.log(letVar);
+    let letVar = 3;
+    func();
+}
+```
+
+Answer:
+
+```javascript
+{
     // TDZ starts at beginning of scope
     const func = () => console.log(letVar); // OK
 
@@ -43,10 +81,26 @@ function letTest() {
     let letVar = 3; // End of TDZ (for letVar)
     func(); // Called outside TDZ!
 }
-
 ```
 
 ## Question 4: `var` vs `let`
+
+```javascript
+var a = 1;
+var b = 2;
+
+if (a == 1) {
+	var a = 11;
+    	let b = 22;
+   	console.log(a);
+   	console.log(b);
+}
+
+console.log(a);
+console.log(b);
+```
+
+Answer:
 
 ```javascript
 var a = 1;
