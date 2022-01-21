@@ -213,3 +213,21 @@ var obj = {
 
 obj.doSomethingLater();
 ```
+
+### Example 4: setTimeout and closures simplified
+
+```javascript
+this.i = 1;
+
+setTimeout(function() { // executes in own timeout context
+	console.log(this.i) // undefined
+}, 100)
+```
+
+```javascript
+this.i = 1;
+
+setTimeout(() => { // does not bind context, so it uses window context
+	console.log(this.i) // 1
+})
+```
