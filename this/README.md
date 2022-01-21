@@ -181,9 +181,9 @@ Object.defineProperty(obj, 'b', {
 var obj = {
     count : 10,
     doSomethingLater : function (){
-        setTimeout(function(){ // the function executes on the window scope
-            this.count++;
-            console.log(this.count);
+        setTimeout(function(){ // the function executes on its own context
+            this.count++; // NaN
+            console.log(this.count); // NaN
         }, 300);
     }
 }
