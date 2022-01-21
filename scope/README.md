@@ -122,7 +122,12 @@ console.log(b); // 2
 ```javascript
 function doSomething() {
 	for (let i = 0; i < 5; i++) {
+	// let defines variables in a block scope,
+	// therefore every reference inside this block to variable i
+	// will actually point to different variables (i.e., different pointers)
 		setTimeout(function() {
+			// this function will be scheduled with different i values
+			// that will have a value of 0, 1, 2, 3, 4 respectively
 			console.log(i);
 		}, 100);
 	}
@@ -136,8 +141,13 @@ doSomething();
 ```javascript
 function doSomething() {
 	for (var i = 0; i < 5; i++) {
+	// var defines variables in a function scope,
+	// therefore every reference inside this block to variable i
+	// will actually point to the same variable (i.e., same pointer)
 		setTimeout(function() {
-			console.log(i);
+			// this will always point to the same variable i,
+			// that at the end of the for loop will have a value of 5
+			console.log(i); // 5
 		}, 100);
 	}
 }
