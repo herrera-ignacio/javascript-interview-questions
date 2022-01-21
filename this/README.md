@@ -189,8 +189,6 @@ var obj = {
 }
 
 obj.doSomethingLater(); // console prints "NaN", because the property "count" is not in the window scope
-
-obj.doSomethingLater.bind(obj)(); // console prints "11"
 ```
 
 #### Solution
