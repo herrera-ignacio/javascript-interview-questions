@@ -117,3 +117,33 @@ console.log(a); // 11
 console.log(b); // 2
 ```
 
+## Question 5: `for` loops:
+
+```javascript
+function doSomething() {
+	for (let i = 0; i < 5; i++) {
+		setTimeout(function() {
+			console.log(i);
+		}, 100);
+	}
+}
+
+doSomething();
+
+// 0 1 2 3 4 5
+```
+
+```javascript
+function doSomething() {
+	for (var i = 0; i < 5; i++) {
+		setTimeout(function() {
+			console.log(i);
+		}, 100);
+	}
+}
+
+doSomething();
+
+// 5 5 5 5 5
+```
+
