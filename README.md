@@ -8,3 +8,5 @@ These are example questions for interviews that allow further discussion and exp
 - [Async functions](async/README.md)
 - [this](this/README.md)
 - [Arrow functions](./this/README.md#arrow-functions-lexical-scope)
+- [Event Loop](event-loop/README.md)
+- [Tasks and microtasks](tasks-and-microtasks/README.md)
