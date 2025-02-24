@@ -5,6 +5,6 @@ These are example questions for interviews that allow further discussion and exp
 - [Scope](scope/README.md)
 - [Closures](closures/README.md)
 - [Hoisting](hoisting/README.md)
-- [Async](async/README.md)
+- [Async functions](async/README.md)
 - [this](this/README.md)
 - [Arrow functions](./this/README.md#arrow-functions-lexical-scope)
